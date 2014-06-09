@@ -1,0 +1,58 @@
+﻿/*初始化*/
+*{margin:0 auto;padding:0;}
+body{ padding:0;margin:0 auto; font-family:Microsoft YaHei,SimSun;position:relative; background:none; background:#fff;}
+p,ul,ul li,form{padding:0; margin:0; list-style:none;}
+a{ text-decoration:none;}
+img{border:0;}
+/*LOGO*/
+.logoArea{position:absolute;top:0px; left:1200px;height:174px; width:204px;z-index:99;}
+/*背景*/
+body{background-color:#aec066;}
+/*左边背景区域*/
+.leftBgArea{background-color:#ce4718;height:auto;height:910px; width:350px;margin:0px 0px;position:relative;}
+.leftNav ul{background-color:#dd8514;height:auto;height:900px;margin:10px 0px 0px 0px;position:absolute;right:0px;width:120px;}
+.leftNav ul li{position:relative;height:145px;width:120px;border:hidden;vertical-align:bottom;}
+.leftNav .navItem{text-align:center;height:145px;width:120px;margin:0px 0px;position:relative;right:0px;position:absolute;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;box-shadow: black 1px 1px 6px;}
+.leftNav .navItem img{margin-top:35px;}
+.leftNavHome{background-color:#7b8846;}
+.leftNavAbout{background-color:#cba200;}
+.leftNavProject{background-color:#c0ac66;}
+.leftNavBlog{background-color:#aec066;}
+.leftNavContent{background-color:#528846;}
+.leftNav .navTitle{margin:0px auto;display:block;font-weight:bolder;color:white;}
+/*内容区域*/
+.mainArea{background-color:#ffffff;height:auto;height:800px;width:820px;position:absolute; left:370px;top:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;}
+.mainArea .contentItem{display:none;overflow-y:auto;overflow-x:hidden;}
+.homeBox{background-color:#e8f6f7;}
+.aboutBox{background-color:#eafbbd;height:100%}
+.aboutTop{background:url("/Content/YQ/Style/Images/about_bg.jpg") no-repeat; width:700px;height:200px;position:relative; margin-top:20px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;box-shadow: black 1px 1px 6px; }
+.aboutPhoto{position:absolute;left:85px; top:50px;z-index:5;}
+.aboutTop .aboutTitle{position:absolute;left:230px; top:80px;}
+.aboutTop .aboutTitle .titleContent{font-family:'Microsoft YaHei'; font-size:18px; font-weight:bold;color:#ffffff;}
+.aboutTop .aboutPos{position:absolute;left:230px; top:110px;}
+.aboutTop .aboutPos .posTitle{font-family:'Microsoft YaHei'; font-size:12px; color:#ffffff; margin-left:5px;}
+.aboutContent{position:absolute;width:700px;height:600px;left:60px;top:170px;z-index:2;background-color:#ffffff;box-shadow:1px 1px 6px black;  _border:1px solid #000000;}
+.aboutContent .line{margin-top:40px;}
+.aboutContent .aboutContentItem{margin-top:30px;margin-left:30px;}
+.aboutContent .aboutContentItem .aboutContentItemTitle{font-size:15px;font-family:'Microsoft YaHei';font-weight:bold;display:block;}
+.aboutContent .aboutContentItem .aboutContentItemDetail{font-size:13px;font-family:'Microsoft YaHei';display:block;text-indent:2em;margin-top:4px;}
+.messageBox{overflow-y:auto;overflow-x:hidden; height:800px;}
+.projectBox {padding-left:10px; padding-top:20px;overflow-y:auto;overflow-x:hidden;background-color:#ddf5f7;height:100%;} 
+.projectBox .projectDetail{overflow:hidden;}
+/*项目内容模块样式*/
+.AllContent{margin-left:50px;min-height:500px;}
+.ContentDetail{margin-left:20px;}
+.ItemContent{float:left;margin-left:10px;min-height:200px;}
+.ContentDetail ul li{display:block;border-left:1px solid black;padding-top:1px; font-size:13px;}
+.ContentTitle{border-bottom:1px solid black;}
+/*多说模块*/
+.duoShuoBox{margin:20px 20px;}
+/*其他公用*/
+.line{width:100%;height:1px;border-bottom:2px solid #e5e5e5;}
+.borderRdius{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.clearFloat{clear:both;height:10px;border-bottom:1px dotted black; }
+/*返回顶部*/
+.TopBox{display:none;height:50px;width:25px;background:url("/Content/YQ/Images/top.png") no-repeat 0 0 scroll; position:fixed; _position: absolute;_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);right:20px; bottom:20px;}
+.TopBoxHover{background:url("/Content/YQ/Images/top.png") no-repeat -27px 0 scroll;}
+/*移动的云*/
+.cloundSay{text-indent:2em; display:none;position:absolute;height:20px;width:150px;top:0px;left:60px;background-color:#b2ccf9;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;font-family:'Microsoft YaHei';font-size:12px;color:#463f28;font-weight:bold;}

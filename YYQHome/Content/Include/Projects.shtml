@@ -1,0 +1,70 @@
+﻿<div class="AllContent">
+            <!--JS封装-->
+            <div  class="ItemContent">
+                <div class="ContentTitle"><span>-</span><span>JQ封装</span></div>
+                <div class="ContentDetail">
+                    <ul>
+                        <li><a href="/JQShow/Move.html" target="_blank">左右滚动图片</a></li>
+                        <li><a href="/JQShow/Pinterest_V1.html" target="_blank">瀑布流</a></li>
+                        <li><a href="/JQShow/ShowList.html" target="_blank">流动显示列表</a></li>
+                        <li><a href="/JQShow/TaoBaoAd.html" target="_blank">广告切换</a></li>
+                        <li><a href="/JQShow/Nav_HeadIcon.html" target="_blank">头像切换And广告切换</a></li>
+                        <li><a href="/JQShow/Referrer.html" target="_blank">获取搜索引擎的来源关键字</a></li>
+                        <li><a href="javascript:;" >等... ...</a></li>
+                    </ul>
+                </div>
+            </div>
+
+             <div  class="ItemContent">
+                <div class="ContentTitle"><span>-</span><span>参与过的官网项目</span></div>
+                <div class="ContentDetail">
+                    <ul>
+                        <li><a href="http://www.jdbbx.com/" target="_blank">百宝箱官网</a></li>
+                        <li><a href="http://dnf.jdbbx.com/" target="_blank">DNF百宝箱官网</a></li>
+                        <li><a href="http://dnf.jdbbx.com/PaiHang/" target="_blank">DNF排行榜</a></li>
+                        <li><a href="http://cf.jdbbx.com/" target="_blank">CF百宝箱官网</a></li>
+                        <li><a href="http://cf.jdbbx.com/xiazai/" target="_blank">CF下载站</a></li>
+                        <li><a href="http://dota2.jdbbx.com/" target="_blank">Dota2百宝箱官网</a></li>
+                        <li><a href="http://mogu.jdbbx.com/" target="_blank">蘑菇官网</a></li>
+                        <li><a href="http://speed.jdbbx.com/" target="_blank">飞车百宝箱官网</a></li>
+                        <li><a href="http://x5.jdbbx.com/" target="_blank">QQ炫舞百宝箱官网</a></li>
+                        <li><a href="http://ls.jdbbx.com/" target="_blank">炉石百宝箱官网</a></li>
+                        <li><a href="http://zt.jdbbx.com/" target="_blank">百宝箱SEO站点</a></li>
+                        <li><a href="javascript:;" >等... ...</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div  class="ItemContent">
+                <div class="ContentTitle"><span>-</span><span>参与过的软件端Web页，功能页</span></div>
+                <div class="ContentDetail">
+                    <ul>
+                        <li><a href="http://jt.soft.jdbbx.com/Pages/indexV3.shtml" target="_blank">百宝箱软件端</a></li>
+                        <li><a href="http://soft.ls.jdbbx.com/CardInfo/CardData.aspx" target="_blank">炉石数据库</a></li>
+                        <li><a href="http://soft.ls.jdbbx.com/Simulator/DrawTiles.aspx" target="_blank">炉石抓拍模拟器</a></li>
+                        <li><a href="http://soft.ls.jdbbx.com/Simulator/CardSetV3.aspx?Mode=Add&Data={%22Id%22%3A%22%22%2C%22OccId%22%3A8%2C%22Name%22%3A%22%E6%88%98%E5%A3%AB%E8%87%AA%E5%AE%9A%E4%B9%89%22%2C%22CardIdList%22%3A{}}" target="_blank">套牌模拟器</a></li>
+                        <li><a href="http://soft.ls.jdbbx.com/Simulator/DrawTiles.aspx" target="_blank">炉石抓拍模拟器</a></li>
+                        <li><a href="http://soft.dota2.jdbbx.com/Equip/Index.aspx" target="_blank">DOTA2装备修改</a></li>
+                        <li><a href="http://soft.dota2.jdbbx.com/Skin/Index.aspx" target="_blank">DOTA2皮肤修改</a></li>
+                        <li><a href="http://soft.lol.jdbbx.com/index.aspx" target="_blank">英雄联盟皮肤修改</a></li>
+                        <li><a href="http://soft.x5.jdbbx.com/SetFashion/Index.aspx" target="_blank">QQ炫舞皮肤修改</a></li>
+                        <li><a href="http://soft.qqxl.jdbbx.com/Apc/" target="_blank">QQ仙灵APC查询</a></li>
+                        <li><a href="http://soft.qqxl.jdbbx.com/PostionWay/Index.aspx?randNo=3736" target="_blank">QQ仙灵阵法查询</a></li>
+                        <li><a href="http://soft.qqxl.jdbbx.com/Question/Index.aspx?randNo=26D9" target="_blank">QQ仙答题库</a></li>
+                        <li><a href="javascript:;" >等... ...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 分隔线 -->
+            <div class="ClearFloat"></div>
+            <!-- 分隔线 -->
+            <div  class="ItemContent" >
+                <div class="ContentTitle"><span>-</span>其他项目<span></span></div>
+                <div class="ContentDetail">
+                    <ul>
+                        <li><a href="http://act.jdbbx.com/2014/BNSFight/" target="_blank">剑灵战斗力活动专题</a></li>
+                        <li><a href="javascript:;" >等... ...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>

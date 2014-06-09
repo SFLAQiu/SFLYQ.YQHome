@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="All" />
+    <meta name="Author" content="AQiu个人主页" />
+    <meta name="Copyright" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="keywords" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="description" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" /> 
+    <title>AQiu个人主页</title>
+    <link href="/Content/YQ/Style/YQ.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="TopBox">
+        <div id="TopNavBox" class="TopNavBox">
+            <ul>
+                <li  class="on">
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/Nav_Home.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+                <li>
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/NavIcon_1.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+                <li>
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/NavIcon_2.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+                <li>
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/NavIcon_3.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+                <li>
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/NavIcon_4.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+                <li>
+                    <img class="TopNavIcon" src="../../Content/YQ/Images/NavIcon_5.png" />
+                    <span class="TopNavTitle"  >HOME</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div ></div>
+    <script src="/JS/jquery.1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function () {
+            $("#TopNavBox ul li").hover(function () {
+                $(this).addClass("on");
+            }, function () {
+                if ($(this).attr("sel") && $(this).attr("sel") == "1") return;
+                $(this).removeClass("on");
+            }).click(function () {
+                $("#TopNavBox ul li.on").removeClass("on").attr({ "sel": "0" });;
+                $(this).addClass("on").attr({"sel":"1"});
+            });
+        })();
+      
+    </script>
+      <!-- 多说公共JS代码-->
+    <script type="text/javascript">
+        var duoshuoQuery = { short_name: "sflyq" };
+        (function () {
+            //绑定数据
+            $("#dsBox").attr({ "data-thread-key": location.pathname, "data-url": location.href, "data-title": $("title") ? $("title").val() : "" });
+            //绑定数据
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript'; ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+
+            //隐藏留言板块设置
+            setTimeout(function () {
+                $(".ds-powered-by a").hide().css({ "dispaly": "none", "height": "0px", "width": "0px;" });
+                $("#ds-sync-checkbox").click().prop("checked", false);
+            }, 2000);
+            //隐藏留言板块设置
+        })();
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/ecmascript">
+        /// <reference path="/JS/jquery.easing.min.js" />
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 10) {
+                $("#TopBox").fadeIn(100);
+            } else {
+                $("#TopBox").fadeOut(100);
+            }
+        });
+        $("#TopBox").hover(function () {
+            $topBoxJq = $(this);
+            $topBoxJq.addClass("TopBoxHover");
+        }, function () {
+            $topBoxJq = $(this);
+            $topBoxJq.removeClass("TopBoxHover");
+        }).click(function () {
+            $(window).scrollTop(0);
+        });
+
+    </script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=30702953" charset="UTF-8"></script>
+</body>
+</html>

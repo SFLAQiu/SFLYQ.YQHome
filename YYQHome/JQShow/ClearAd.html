@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JS广告清理功能V1.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="All" />
+    <meta name="Author" content="JS广告清理功能,SFLYQ个人主页,AQiu个人主页" />
+    <meta name="Copyright" content="JS广告清理功能,SFLYQ个人主页,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="keywords" content="JS广告清理功能,SFLYQ个人主页,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="description" content="JS广告清理功能,SFLYQ个人主页,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <link href="/Content/YQ/Style/ShowCodePart.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var username = "JdbbxUser";
+        var _blogger = username;
+    </script>
+</head>
+<body>
+    <a href="http://qiu.moepet.info/Home/YQ/">返回我的主页</a>
+    <div>
+        <p style="font-weight:bolder;">JS广告清理功能(JS自制广告清理，推荐在谷歌浏览器下使用)效果如图：</p>
+        <p style="font-size:12px;color:red;">功能说明：清理百度广告，谷歌广告，淘宝，和网站自己的部分广告。</p>
+        <p style="font-size:12px;color:red;">注释：虽然谷歌已经有很多很好用的广告屏蔽的插件，但是什么东西还是自己写的好用，-，= 自娱自乐！！！分享。
+        </p>
+        <div>
+            <p>1.使用前：</p>
+        <div>
+            <img width="600" height="400" src="../Content/YQ/Images/cAd_q.jpg" />
+        </div>
+        <div>
+        <p>2.使用后：</p>
+        <div>
+            <img width="600" height="400" src="../Content/YQ/Images/cAd_h.jpg" />
+        </div>
+        </div>
+    </div>
+    </div>
+    <hr style="margin:50px 0px 50px 0px;" />
+    <div>
+       <div>
+         <p style="font-weight:bolder;">使用添加方式：</p>
+           <div>
+                <p>1.右击浏览器顶部的标签栏，选中【添加网页】。</p>
+                <img width="600" height="400" src="../Content/YQ/Images/cAd_b1.jpg" />
+           </div>
+           <div>
+               <p>2.将代码拷贝到输入框中，如图：</p>
+                <img width="600" height="400" src="../Content/YQ/Images/cAd_b2.jpg" />
+                <p>代码：</p>
+                <div>
+                    <pre name="code" class="csharp">javascript:(function(){function n(e,n){SFLYQ_jQuery=undefined;var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src=(document.location.protocol=="https:"?"https:":"http:")+"//"+e,r.charset="UTF-8",r.setAttribute("adjq",n),(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(r),t.write("=&gt;添加jquery.SFLYQ.1.9.1.min.js脚本！")}function r(e){t.write("=&gt;校验javascript类库"+e+"是否存在！");var n=document.getElementsByTagName("script");if(!n||n.length&lt;=0)return!1;for(var r=0;r&lt;n.length;r++){var i=n[r];if(i.getAttribute("adjq")==e)return!0}return!1}function s(e){var t="";if(!e||e.length&lt;=0)return t;for(var n=0;n&lt;e.length;n++)e[n].selArr||continune,t+=e[n].selArr.join(","),n&lt;e.length-1&&(t+=",");return t}function o(){window.setIntervalClearAd=setInterval(function(){if(!SFLYQ_jQuery){t.write("=&gt;还未加载到jquery.SFLYQ.1.9.1.min.j！稍等,努力中。。。");return}var e=SFLYQ_jQuery(s(i));if(!e||e.length&lt;=0){t.write("=&gt;bingo 没有发现需要清理的广告！"),u();return}var n=e.length;e.remove(),t.write("=&gt;bingo 清理广告数量："+n+"成功！"),u();return},500)}function u(){window.setIntervalClearAd&&clearInterval(window.setIntervalClearAd)}SFLYQ_jQuery=undefined;var e=function(){var e=this;this.ini=function(){e.bindMsgBox()},this.bindMsgBox=function(){if(document.getElementById("SFLYQ_MsgBox"))return;var t=document.createElement("div");t.id="SFLYQ_MsgBox",t.style.cssText="z-index:9999999;width:422px;height:180px;border:1px solid #000000;background-color:#ffffff;position:fixed;_position: absolute;_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);left:10px;top:10px;display:none;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;";var n='&lt;div style="background-color:#0693cd;border-bottom:1px solid #000000;position:relative;color:#ffffff;font-weight: bolder;"&gt;SFLYQ V1.0%E5%B9%BF%E5%91%8A%E6%B8%85%E7%90%86%E6%97%A5%E5%BF%97%EF%BC%9A&lt;a id="SFLYQ_Close" style="position:absolute;right:5px;" href="javascript:;"&gt;X&lt;/a&gt;&lt;/div&gt;&lt;textarea id="SFLYQ_MsgBox_Content" style="width:420px;height:160px;"&gt;&lt;/textarea&gt;';document.getElementsByTagName("body")[0].appendChild(t),document.getElementById("SFLYQ_MsgBox").innerHTML=n,document.getElementById("SFLYQ_Close").onclick=e.hide},this.show=function(){document.getElementById("SFLYQ_MsgBox")&&(document.getElementById("SFLYQ_MsgBox").style.display="block")},this.hide=function(){document.getElementById("SFLYQ_MsgBox")&&(document.getElementById("SFLYQ_MsgBox").style.display="none")},this.clearValue=function(){document.getElementById("SFLYQ_MsgBox_Content")&&(document.getElementById("SFLYQ_MsgBox_Content").value="")},this.write=function(e){document.getElementById("SFLYQ_MsgBox_Content")&&(document.getElementById("SFLYQ_MsgBox_Content").value+=e+"\r\n")}},t=new e;t.ini(),t.clearValue(),t.show(),r("jquery.SFLYQ.1.9.1.min.js")||n("sandbox.runjs.cn/uploads/rs/89/s6tmn5tc/jquery.SFLYQ.1.9.1..js");var i=[{key:"%E7%99%BE%E5%BA%A6%E5%B9%BF%E5%91%8A",selArr:["[id*='BAIDU']","[class*='BAiDU']","[href*='cpro.baidu']","[id*='cproIframe']","iframe[src*='baidu']","[id='bdshare']"]},{key:"%E9%80%9A%E7%94%A8",selArr:["[id^='ads']","[id^='ad']","[class^='ads']","[class^='ad']","[class*='advert']","ins"]},{key:"%E8%B0%B7%E6%AD%8C",selArr:["[id*='google_ads']"]},{key:"%E8%85%BE%E8%AE%AF",selArr:["iframe[src*='adsfile.qq.com]"]}];o()})();</pre>
+               </div>
+           </div>
+            <div>
+               <p>3.使用的时候，点击通过上面步骤添加好的标签即可看到效果！</p>
+           </div>
+     </div>
+    </div>
+
+    <!--评论模块-->
+    <div>
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" id="dsBox" data-thread-key="Home" data-title="" data-url="http://qiu.moepet.info/Home/YQ/"></div>
+        <!-- 多说评论框 end -->
+        </div>
+        <!--评论模块-->
+    <script type="text/javascript" src="/JS/jquery.1.9.1.min.js"></script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript">
+
+        var duoshuoQuery = { short_name: "sflyq" };
+        (function () {
+            //绑定数据
+            $("#dsBox").attr({ "data-thread-key": location.pathname, "data-url": location.href, "data-title": $("title") ? $("title").val() : "" });
+            //绑定数据
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript'; ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+
+            //隐藏留言板块设置
+            setTimeout(function () {
+                $(".ds-powered-by a").hide().css({ "dispaly": "none", "height": "0px", "width": "0px;" });
+                $("#ds-sync-checkbox").click().prop("checked", false);
+            }, 2000);
+            //隐藏留言板块设置
+        })();
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript" src="/JS/ShowCodePart.min.js?v=1.1"></script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=30702953" charset="UTF-8"></script>
+</body>
+</html>

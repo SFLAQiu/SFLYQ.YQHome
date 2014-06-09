@@ -1,0 +1,232 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Jquery头像切换功能,广告切换</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Robots" content="All" />
+        <meta name="Author" content="Jquery头像切换功能,广告切换,AQiu个人主页" />
+        <meta name="Copyright" content="Jquery头像切换功能,广告切换,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+        <meta name="keywords" content="Jquery头像切换功能,广告切换,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+        <meta name="description" content="Jquery头像切换功能,广告切换,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <style type="text/css">
+        /*公用*/
+        *{margin:0 auto;padding:0;}
+        body{ padding:0;margin:0 auto; font-family:Microsoft YaHei,SimSun;position:relative; background:none; background:#fff;}
+        a{ text-decoration:none;}
+        p,ul,ul li,form{padding:0; margin:0; list-style:none;}
+        img{border:0;}
+        .FG{margin: 50px 0px 50px 0px;clear: both;}
+        .title{background-color: black; color: white; font-weight:bolder;width: 200px;margin: 0px;}
+        /*头像切换功能*/
+        .NavMain{width: 1100px;margin-left:0px;height: 150px;position: relative;  }
+        .NavBox{width:1100px; position:absolute;bottom:0px;}
+        .NavBox li{position: relative;float: left;display: inline;width: 90px;height: 125px;}
+        .NavBox li img{position: absolute;bottom: 0px;}
+        .NavContent{height:200px;width: 1100px;border: 0px solid black;margin-left:0px; }
+        /*广告切换*/
+        .AdNavMain{width: 150px; float: left;margin-left: 2px;}
+        .AdNavMain li{height: 50px; width: 50px; float: left;border: 1px solid black; }
+        .AdNavMain  .selectItem{display: none;}
+        .AdNavMain .on .selectItem{display: block;}
+        .AdContentMain{height: 300px; width: 800px; border: 1px solid black;margin-left: 0px;float: left;overflow: hidden;position:relative;}
+        .AdCItem{height: 300px; width: 800px;position: absolute;}
+
+    </style>
+</head>
+<body>
+	<!--分割-->
+    <div class="FG"></div>
+	<!--分割-->
+    <!--头像切换功能-->
+    <div class="title">头像切换功能：</div>
+    <div style="background: url('/Content/YQ/Image/bg.gif') repeat-x left top;">
+        <div class="NavContent">
+        </div>
+        <div class="NavMain">
+             <ul id="NavBox" class="NavBox">
+                <li><img src="/Content/YQ/Images/1.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//2.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//3.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//4.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//5.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//6.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//7.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//8.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//9.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//11.png" width="90"/></li>
+                <li><img src="/Content/YQ/Images//12.png" width="90"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--头像切换功能-->
+    <!--分割-->
+    <div class="FG"></div>
+	<!--分割-->
+    <!--广告切换-->
+    <div class="title">广告切换：</div>
+    <div style="clear:both;height:400px;">
+        <div class="AdMain">   
+            <div id="AdContentMain" class="AdContentMain">
+                <div class="AdCItem" style=" background-color:#7bbbe8;"></div>
+                <div class="AdCItem" style=" background-color:#e079ca;"></div>
+                <div class="AdCItem" style=" background-color:#b89ab2;"></div> 
+                <div class="AdCItem" style=" background-color:#4fa698;"></div>
+                <div class="AdCItem" style=" background-color:#466136;"></div>
+                <div class="AdCItem" style=" background-color:#e5e6ac;"></div> 
+                <div class="AdCItem" style=" background-color:#d9b371;"></div>
+                <div class="AdCItem" style=" background-color:#7786ab;"></div>
+            </div>
+            <div>
+                <ul id="AdNavMain" class="AdNavMain">
+                    <li style=" background-color:#7bbbe8; ">1<span class="selectItem">√</span></li>
+                    <li style=" background-color:#e079ca; ">2<span class="selectItem">√</span></li>
+                    <li style=" background-color:#b89ab2; ">3<span class="selectItem">√</span></li>
+                    <li style=" background-color:#4fa698; ">4<span class="selectItem">√</span></li>
+                    <li style=" background-color:#466136; ">5<span class="selectItem">√</span></li>
+                    <li style=" background-color:#e5e6ac; ">6<span class="selectItem">√</span></li>
+                    <li style=" background-color:#d9b371; ">7<span class="selectItem">√</span></li>
+                    <li style=" background-color:#7786ab; ">8<span class="selectItem">√</span></li>
+                </ul>
+            </div>
+        </div>
+      
+    </div>
+    <!--广告切换-->
+	<!--分割-->
+    <div class="FG"></div>
+	<!--分割-->
+    <!--评论模块-->
+    <div>
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" id="dsBox" data-thread-key="Home" data-title="" data-url="http://qiu.moepet.info/Home/YQ/"></div>
+        <!-- 多说评论框 end -->
+    </div>
+    <!--评论模块-->
+    <script type="text/javascript" src="/JS/jquery.1.9.1.min.js"></script>
+    <script type="text/javascript" src="/JS/jquery.easing.min.js"></script>
+    <script type="text/javascript">
+	//////////////////////////////////////////////////
+	//// 时间：2014-3-24
+	//// 作者：YYQ
+	//// 功能：头像切换功能(非封装版本)
+	//////////////////////////////////////////////////
+    //头像切换功能:
+    (function() {
+        $("#NavBox li").hover(function() {
+            var navItemJq=$(this);
+            navItemJq.find("img").stop(false,true).animate({
+                width:"+140px",
+                left:"-20px"
+            },300);
+        },function(){
+            var navItemJq=$(this);
+            navItemJq.find("img").stop(false,true).animate({
+                "width":"90px",
+                "left":"0px"
+            },700,"easeOutBounce");
+        });
+    })();
+    </script>
+    <script type="text/javascript">
+	//////////////////////////////////////////////////
+	//// 时间：2014-3-24
+	//// 作者：YYQ
+	//// 功能：广告切换功能
+	//////////////////////////////////////////////////
+
+    //广告切换功能
+    (function(){
+		var AdSwitch=function(setObj){
+		    var configObj={
+		        "AdContentItemsSel":"",//广告内容元素集合选择器
+		        "AdNavItemsSel":"",//导航元素集合选择器
+		        "NavOnClassName":""//选中导航需要添加的类名
+		    };
+		    configObj=$.extend(configObj,setObj);
+		    var optOjb={};
+		    var optJq={};
+		    this.ini=function(){
+		       var t=this;
+		       //初始化jq对象
+		       optJq.adContentItemsJq= $(configObj.AdContentItemsSel);
+		       optJq.adNavItemsJq=$(configObj.AdNavItemsSel);
+		       //获取广告的高度，(相当于广告切换需要移动高度)
+		       optOjb.AdMoveTop=parseInt(optJq.adContentItemsJq.eq(0).outerHeight(true),10);
+		       //初始化广告配置
+		       optJq.adContentItemsJq.eq(0).css({"top":"0px"});
+		       optJq.adContentItemsJq.not(optJq.adContentItemsJq.eq(0)).css({"top":"+"+optOjb.AdMoveTop+"px"}).attr({"ison":"0"});
+		       //注册导航点击事件
+		       optJq.adNavItemsJq.click(function(){
+		           var index=optJq.adNavItemsJq.index($(this));
+		           t.doSwitchAd(index,t.doSelectNav);
+		       }).eq(0).click();
+
+		    };
+		    //广告轮播操作
+		    this.doSwitchAd=function(index,callBack){
+			   if(index<0)return;
+		       var needSwitchAdJq=optJq.adContentItemsJq.eq(index);
+		       var nowSwitchJq=$(configObj.AdContentItemsSel+"[ison='1']");
+		       var nowIndex=optJq.adContentItemsJq.index(nowSwitchJq);
+		       if(index==nowIndex)return;
+		       //下面执行轮播到选中广告显示
+		       if(needSwitchAdJq && nowSwitchJq){
+					if(callBack)callBack(index);
+		            needSwitchAdJq.attr({"ison":"1"}).stop(false,true).animate({
+		                 top:"0px"
+		             },200);
+		            nowSwitchJq.attr({"ison":"0"}).stop(false,true).animate({
+		                top:"-"+optOjb.AdMoveTop+"px"
+		            },200,function(){
+		            	$(this).css({"top":optOjb.AdMoveTop+"px"});
+		            })
+		        }
+		    };
+		    //导航选中操作
+		    this.doSelectNav=function(index){
+		    	if(configObj.NavOnClassName){
+		    		optJq.adNavItemsJq.filter("."+configObj.NavOnClassName).removeClass(configObj.NavOnClassName);
+		    		optJq.adNavItemsJq.eq(index).addClass(configObj.NavOnClassName);
+		    	}
+		    };
+		};
+
+
+		//调用:创建对象
+		var aw=new AdSwitch({
+		    "AdContentItemsSel":"#AdContentMain .AdCItem",
+		    "AdNavItemsSel":"#AdNavMain li",
+		    "NavOnClassName":"on"
+		});
+		//调用初始化函数
+		aw.ini();
+
+    }())
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript">
+        var duoshuoQuery = { short_name: "sflyq" };
+        (function () {
+            //绑定数据
+            $("#dsBox").attr({ "data-thread-key": location.pathname, "data-url": location.href, "data-title": $("title") ? $("title").val() : "" });
+            //绑定数据
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript'; ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+
+            //隐藏留言板块设置
+            setTimeout(function () {
+                $(".ds-powered-by a").hide().css({ "dispaly": "none", "height": "0px", "width": "0px;" });
+                $("#ds-sync-checkbox").click().prop("checked", false);
+            }, 2000);
+            //隐藏留言板块设置
+        })();
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=30702953" charset="UTF-8"></script>
+</body>
+</html>

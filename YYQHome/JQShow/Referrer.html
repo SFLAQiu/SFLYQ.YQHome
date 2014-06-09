@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery实现来源关键字</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Robots" content="All" />
+    <meta name="Author" content="Jquery实现来源关键字,AQiu个人主页,AQiu来源关键字" />
+    <meta name="Copyright" content="AQiu来源关键字,AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="keywords" content="AQiu来源关键字,AQiu个人主页,YYQ个人主页" />
+    <meta  name="description" content="AQiu来源关键字,AQiu个人主页,YYQ个人主页" />
+</head>
+<body>
+     <div>
+         <p>来源功能说明：</p>
+         <p style="text-indent:2em;">1.通过百度，谷歌等搜索引擎输入关键字搜索，通过搜索结果列表里进入当前调用搜索功能的页面后就可以获取搜索引擎中的关键字。</p>
+         <p style="text-indent:2em;">2.调用方式如：当前页面源代码查看！(目前就只拓展百度，和谷歌搜索引擎，若想支持其他搜索引擎需要拓展)</p>
+         <p style="text-indent:2em;">3.测试方式：搜索“AQiu来源关键字”找到当前页面地址的入口(因为这个页面没有什么流量，不确定搜索引擎能否收入我们SEO关键字!)</p>
+     </div>
+    <div id="ReferrerBox" style="color:red;"></div>
+    <!--评论模块-->
+    <div>
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" id="dsBox" data-thread-key="Home" data-title="" data-url="http://qiu.moepet.info/Home/YQ/"></div>
+        <!-- 多说评论框 end -->
+    </div>
+    <!--评论模块-->
+    <script src="/JS/jquery.1.9.1.min.js"></script>
+    <script src="/JS/SFLYQ.Helper.js"></script>
+    <script src="/JS/SFLYQ.Referrer.js"></script>
+    <script type="text/javascript">
+        SFLYQ.Referrer.DoAllHander(function (data) {
+            $("#ReferrerBox").html("获取来源关键字为：" + data);
+        }, function () {
+            $("#ReferrerBox").html("无法获取来源！！！");
+        });
+
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript">
+        var duoshuoQuery = { short_name: "sflyq" };
+        (function () {
+            //绑定数据
+            $("#dsBox").attr({ "data-thread-key": location.pathname, "data-url": location.href, "data-title": $("title") ? $("title").val() : "" });
+            //绑定数据
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript'; ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+
+            //隐藏留言板块设置
+            setTimeout(function () {
+                $(".ds-powered-by a").hide().css({ "dispaly": "none", "height": "0px", "width": "0px;" });
+                $("#ds-sync-checkbox").click().prop("checked", false);
+            }, 2000);
+            //隐藏留言板块设置
+        })();
+    </script>
+    <!-- 多说公共JS代码-->
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=30702953" charset="UTF-8"></script>
+</body>
+</html>

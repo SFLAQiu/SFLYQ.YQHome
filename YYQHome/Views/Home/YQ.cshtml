@@ -1,0 +1,137 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="All" />
+    <meta name="Author" content="AQiu个人主页" />
+    <meta name="Copyright" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="keywords" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" />
+    <meta name="description" content="AQiu个人主页,YYQ个人主页,YYQ,AQiu" /> 
+    <title>AQiu个人主页</title>
+    <link href="/Content/YQ/Style/YQ.css" rel="stylesheet" />
+      <!--[if lt IE 7.]>
+    <script type="text/javascript" src="/JS/ie6Png.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/YQ/Style/main.ie6.css" />
+    <![endif]--></head>
+<body style="overflow-x:auto;">
+    <div class="logoArea pngPic" style="z-index:5;">
+          <img src="/Content/YQ/Style/Images/logo.png" />
+    </div>
+    <div class="leftBgArea">
+        <div class="leftNav">
+            <ul id="leftNavBox">
+                <li>
+                    <div class="navItem leftNavHome" pos="#pos_Home"> 
+                        <img class="png" src="/Content/YQ/Style/Images/Nav_Home.png" />
+                        <span class="navTitle">首页</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="navItem leftNavAbout"  pos="#pos_About">
+                        <img class="png" src="/Content/YQ/Style/Images/Nav_About.png" />
+                        <span class="navTitle">关于我</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="navItem leftNavProject" pos="#pos_Project">
+                        <img class="png" src="/Content/YQ/Style/Images/Nav_Project.png" />
+                        <span class="navTitle">我的项目</span>
+                    </div>
+                </li>
+               @* <li>
+                    <div class="navItem leftNavBlog">
+                        <img src="/Content/YQ/Style/Images/Nav_Blog.png" />
+                        <span class="navTitle">未开启</span>
+                    </div>
+                </li>*@
+                <li>
+                    <div class="navItem leftNavContent" pos="#pos_Message">
+                        <img class="png" src="/Content/YQ/Style/Images/Nav_Message.png" />
+                        <span class="navTitle">留言</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainArea">
+        <!--首页-->
+        <div id="pos_Home" class="contentItem homeBox borderRdius">
+            <div style="width:600px; height:800px;overflow:hidden;"  >
+                <img  width="600" height="690" src="../../Content/YQ/Style/Images/Home.jpg"/>
+            </div>
+        </div>
+        <!--首页-->
+        <!--关于我-->
+        <div id="pos_About" class="contentItem aboutBox borderRdius">
+            <div class="aboutTop">
+                 <div class="aboutTitle">
+                   <span class="titleContent">Mr.SFL.YQ</span>
+                </div>
+                <div class="aboutPos">
+                    <img class="png" src="../../Content/YQ/Style/Images/icon_pos.png" /><span class="posTitle">中国-福建</span>
+                </div>
+            </div>
+            <div class="aboutPhoto">
+                <img height="150" width="150" style="z-index:5;" src="../../Content/YQ/Style/Images/MyPhoto.jpg" />
+            </div>
+            <div class="aboutContent borderRdius">
+                <div class="line"></div>
+                <div class="aboutContentItem">
+                    <span class="aboutContentItemTitle"><span style="color:#1a15eb;">var</span> MyDetailInfo={</span>
+                    <span class="aboutContentItemDetail">"姓名":"YYQ",</span>
+                    <span class="aboutContentItemDetail">"年龄":"无穷+",</span>
+                    <span class="aboutContentItemDetail">"性别":"超Man",</span>
+                    <span class="aboutContentItemDetail">"籍贯":"中国,福建,三明,尤溪",</span>
+                    <span class="aboutContentItemDetail">"身高":"178+",</span>
+                    <span class="aboutContentItemDetail">"QQ":"5636****741",</span>
+                    <span class="aboutContentItemDetail">"爱好":"看NBA,看动漫,打游戏,一个字：宅（其实特想出去玩耍）"</span>
+                    <span class="aboutContentItemTitle">};</span>
+                </div>
+                 <div class="aboutContentItem">
+                    <span class="aboutContentItemTitle"><span style="color:#1a15eb;">var</span> WorkDetailInfo={</span>
+                    <span class="aboutContentItemDetail">"工作年限":"2011-12-1开始至今天",</span>
+                    <span class="aboutContentItemDetail">"工作方向":"网站开发（前段+服务端）",</span>
+                    <span class="aboutContentItemDetail">"已经点亮技能":"C#,Asp.net,Javascript,Jquery+ajax,div+css,sqlserver",</span>
+                    <span class="aboutContentItemDetail">"未来发现方向":"学习更高超摘香蕉技术！"</span>
+                    <span class="aboutContentItemTitle">};</span>
+                </div>
+                <div class="aboutContentItem">
+                    <span class="aboutContentItemTitle"><span style="color:#1a15eb;">var</span> LifeArr=[</span>
+                    <span class="aboutContentItemDetail">"健康+开心↑",</span>
+                    <span class="aboutContentItemDetail">"工作+Money↑"</span>
+                    <span class="aboutContentItemTitle">];</span>
+                </div>
+            </div>
+        </div>
+        <!--关于我-->
+        <!--我做过的项目-->
+        <div id="pos_Project" class="contentItem projectBox borderRdius">
+            <div class="projectDetail borderRdius">
+                 @RenderPage("Projects.cshtml")
+            </div>
+           
+        </div>
+        <!--我做过的项目-->
+        <!--留言-->
+         <div id="pos_Message" class="contentItem messageBox borderRdius">
+            <!--评论模块-->
+            <div class="duoShuoBox">
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" id="dsBox" data-thread-key="Home" data-title="" data-url="http://qiu.moepet.info/Home/YQ/"></div>
+                <!-- 多说评论框 end -->
+            </div>
+            <!--评论模块-->
+        </div>
+        <!--留言-->
+    </div>
+    <script src="/JS/jquery.1.9.1.min.js" type="text/javascript"></script>
+    <script src="/JS/jquery.easing.min.js"></script>
+    <script src="/JS/SFLYQ.Helper.js"></script>
+    <script src="/JS/YQ.js"></script>
+</body>
+</html>
