@@ -15,7 +15,7 @@
     }
     <div class="manageMain shaDowBorder">
         <div>
-            <div><a href="http://www.yyq.com/Admin/AddProject/?action=Add">[添加项目]</a></div>
+            <div><a href="/Admin/AddProject/?action=Add">[添加项目]</a></div>
         </div>
         <div class="line" style="margin-bottom:10px"></div>
         <div style="margin:0px 0px 0px 10px; width:1000px;">
@@ -23,11 +23,11 @@
             <div class="projectMain shaDowBorder">
                 <div>
                     <span>项目名:@item.TypeName</span>
-                    <span style="margin-left:40px"><a href="http://www.yyq.com/Admin/AddProjectDetail/?ProjectId=@item.Id"  onclick="deleteProject(@item.Id);return false;" itemid="@item.Id">[删除]</a></span>
+                    <span style="margin-left:40px"><a href="javascript:;" onclick="deleteProject(@item.Id);return false;" itemid="@item.Id">[删除]</a></span>
                     <span>|</span>
-                     <span><a href="http://www.yyq.com/Admin/AddProject/?ProjectId=@item.Id&Action=Edit"  itemid="@item.Id">[编辑]</a></span>
+                     <span><a href="/Admin/AddProject/?ProjectId=@item.Id&Action=Edit"  itemid="@item.Id">[编辑]</a></span>
                     <span>|</span>
-                    <span><a href="http://www.yyq.com/Admin/AddProjectDetail/?ProjectId=@item.Id&Action=Add" itemid="@item.Id">[添加详细]</a></span>
+                    <span><a href="/Admin/AddProjectDetail/?ProjectId=@item.Id&Action=Add" itemid="@item.Id">[添加详细]</a></span>
                 </div>
                 @if (item.projectDetailDatas == null || item.projectDetailDatas.Count <= 0) { 
                 <div>还未添加详情！</div>
