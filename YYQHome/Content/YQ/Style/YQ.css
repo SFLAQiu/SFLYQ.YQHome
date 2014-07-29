@@ -21,9 +21,9 @@ body{background-color:#aec066;}
 .leftNavContent{background-color:#528846;}
 .leftNav .navTitle{margin:0px auto;display:block;font-weight:bolder;color:white;}
 /*内容区域*/
-.mainArea{background-color:#ffffff;height:auto;height:800px;width:820px;position:absolute; left:370px;top:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;}
+.mainArea{background-color:#ffffff;height:auto;height:880px;width:820px;position:absolute; left:370px;top:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;}
 .mainArea .contentItem{display:none;overflow-y:auto;overflow-x:hidden;}
-.homeBox{background-color:#e8f6f7;}
+.homeBox{background-color:#e8f6f7;height:100%;}
 .aboutBox{background-color:#eafbbd;height:100%}
 .aboutTop{background:url("/Content/YQ/Style/Images/about_bg.jpg") no-repeat; width:700px;height:200px;position:relative; margin-top:20px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;box-shadow: black 1px 1px 6px; }
 .aboutPhoto{position:absolute;left:85px; top:50px;z-index:5;}

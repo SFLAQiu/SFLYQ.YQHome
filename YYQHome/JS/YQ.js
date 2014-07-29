@@ -1,9 +1,13 @@
 ﻿/// <reference path="/JS/jquery.1.9.1.min.js" />
 /// <reference path="/JS/SFLYQ.Helper.js" />
 // 多说公共JS代码
-var duoshuoQuery = { short_name: "sflyq" };
+var duoshuoQuery = {short_name: "sflyq"};
 var sflHp = SFLYQ.Helper;
 (function () {
+    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
+        $("#pos_Message").html("<div>温馨提示：留言板不支持IE6，推荐使用谷歌浏览器访问！</div>");
+        return;
+    }
     //绑定数据
     $("#dsBox").attr({ "data-thread-key": location.pathname, "data-url": location.href, "data-title": $("title") ? $("title").val() : "" });
     //绑定数据
@@ -11,9 +15,7 @@ var sflHp = SFLYQ.Helper;
     ds.type = 'text/javascript'; ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-
+    (document.getElementsByTagName('head')[0]|| document.getElementsByTagName('body')[0]).appendChild(ds);
     //隐藏留言板块设置
     setTimeout(function () {
         $(".ds-powered-by a").hide().css({ "dispaly": "none", "height": "0px", "width": "0px;" });
@@ -121,7 +123,7 @@ var sflHp = SFLYQ.Helper;
     function doBindMove() {
         var htmlStyle =
             '<div id="{id}" class="pngPic" style="position:relative;width:80px;height:40px;z-index:100;" >' +
-                '<img   src="../../Content/YQ/Style/Images/{id}.png" />' +
+                '<img class="png"   src="../../Content/YQ/Style/Images/{id}.png" />' +
                 '<span class="cloundSay">{say}</span>' +
             '</div>';
         var bindData = sflHp.arrayHelper.getRandomValue(cloundDatas);
@@ -131,6 +133,4 @@ var sflHp = SFLYQ.Helper;
         doBindHander("#" + bindData.id);
     }
     doBindMove();
-   
-
 })();

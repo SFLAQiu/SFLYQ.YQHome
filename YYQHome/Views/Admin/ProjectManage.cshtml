@@ -1,0 +1,88 @@
+﻿@{ Layout = "~/Views/Shared/_AdminLayout.cshtml";}
+@section Head{
+    <style type="text/css">
+        body{background-color:#fff;}
+        .dataList  td { width:200px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px;}
+        .dataList thead td {background-color:#4ba1ea;color:#fff;}
+        .shaDowBorder { -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px; }
+        .projectMain { margin-bottom:40px;}
+        .manageMain { margin:10px 0px 0px 10px;}
+    </style>    
+}
+@using Model;
+    @{
+        List<MProject> projectDatas = ViewBag.Datas;
+    }
+    <div class="manageMain shaDowBorder">
+        <div>
+            <div><a href="http://www.yyq.com/Admin/AddProject/?action=Add">[添加项目]</a></div>
+        </div>
+        <div class="line" style="margin-bottom:10px"></div>
+        <div style="margin:0px 0px 0px 10px; width:1000px;">
+            @foreach (var item in projectDatas) {
+            <div class="projectMain shaDowBorder">
+                <div>
+                    <span>项目名:@item.TypeName</span>
+                    <span style="margin-left:40px"><a href="http://www.yyq.com/Admin/AddProjectDetail/?ProjectId=@item.Id"  onclick="deleteProject(@item.Id);return false;" itemid="@item.Id">[删除]</a></span>
+                    <span>|</span>
+                     <span><a href="http://www.yyq.com/Admin/AddProject/?ProjectId=@item.Id&Action=Edit"  itemid="@item.Id">[编辑]</a></span>
+                    <span>|</span>
+                    <span><a href="http://www.yyq.com/Admin/AddProjectDetail/?ProjectId=@item.Id&Action=Add" itemid="@item.Id">[添加详细]</a></span>
+                </div>
+                @if (item.projectDetailDatas == null || item.projectDetailDatas.Count <= 0) { 
+                <div>还未添加详情！</div>
+                } else {
+                <table style="margin: 0px 0px" class="dataList">
+                    <thead>
+                        <tr>
+                            <td>名称</td>
+                            <td>地址</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var itemDetail in item.projectDetailDatas) {
+                            <tr>
+                                <td>@itemDetail.Title</td>
+                                <td><a href="@itemDetail.Url" target="_blank">详情地址</a></td>
+                                <td>
+                                    <a href="/Admin/AddProjectDetail/?ProjectId=@item.Id&ProjectDetailId=@itemDetail.Id&Action=Edit" itemid="@itemDetail.Id" >编辑</a>
+                                    <span>|</span>
+                                    <a href="javascript:;" onclick="deleteProjectDetail(@item.Id,@itemDetail.Id);return false;" itemid="@itemDetail.Id">删除</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>}
+                <div class="line"></div>
+            </div>}
+        </div>
+    </div>
+
+@section  BodyFooter{
+<script type="text/javascript">
+    /// <reference path="/JS/jquery.1.9.1.min.js" />
+    /// <reference path="/JS/SFLYQ.Helper.js" />
+    var hp = SFLYQ.Helper;
+    //删除项目
+    function deleteProject(projectId) {
+        if (!confirm("确定要删除吗？")) return;
+        $.post("/AdminAjax/DeleteProject/", { "ProjectId": projectId }, function (data) {
+            switch (data.Code) {
+                case "100": location.reload(); break;
+                default: alert(data.Msg); break;
+            }
+        })
+    }
+    //删除项目详情
+    function deleteProjectDetail(projectId, projectDetailId) {
+        if (!confirm("确定要删除吗？")) return;
+        $.post("/AdminAjax/DeleteProjectDetail/", { "ProjectId": projectId, "ProjectDetailId": projectDetailId }, function (data) {
+            switch (data.Code) {
+                case "100": location.reload(); break;
+                default: alert(data.Msg); break;
+            }
+        })
+    }
+</script>    
+}

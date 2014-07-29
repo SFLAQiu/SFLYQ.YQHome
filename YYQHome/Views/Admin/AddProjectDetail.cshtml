@@ -1,0 +1,55 @@
+﻿@{ Layout = "~/Views/Shared/_AdminLayout.cshtml";}
+@section Head{
+<style type="text/css">
+        body{background-color:#fff;}
+        .dataList { margin:0px 0px;}
+        .shaDowBorder { -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px; }
+        .projectMain { margin-bottom:40px;}
+        .allMain { margin:10px 0px 0px 10px;width:500px;}
+    </style>      
+}
+@using Model;
+@{MProjectDetail mProjectDetail = ViewBag.ProjectDetail;}
+<div class="allMain shaDowBorder">
+    <table class="dataList">
+        <tr>
+            <td>标题</td>
+            <td><input class="parameItem" style="width:400px;" value="@mProjectDetail.Title" type="text" name="Title"></td>
+            <td style="color:#f00;">*</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td><input class="parameItem" style="width:400px;" value="@mProjectDetail.Url" type="text" name="Url"></td>
+            <td style="color:#f00;">*</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="提价保存" onclick="@(ViewBag.Action+"()"); return false;"/></td>
+        </tr>
+    </table>
+
+</div>
+    
+@section  BodyFooter{
+<script type="text/javascript">
+    /// <reference path="/JS/jquery.1.9.1.min.js" />
+    /// <reference path="/JS/SFLYQ.Helper.js" />
+    var hp = SFLYQ.Helper;
+    function Add() {
+        $.post("/AdminAjax/AddProjectDetail/", { "ProjectId": "@ViewBag.ProjectId", "Title": $(".parameItem[name='Title']").val(), "Url": $(".parameItem[name='Url']").val() }, function (data) {
+            switch (data.Code) {
+                case "100": location.href = "/Admin/ProjectManage/"; break;
+                default: alert(data.Msg);
+            }
+        })
+    }
+    function Edit() {
+        $.post("/AdminAjax/EditProjectDetail/", { "ProjectId": "@ViewBag.projectId", "ProjectDetailId": "@ViewBag.projectDetailId", "Title": $(".parameItem[name='Title']").val(), "Url": $(".parameItem[name='Url']").val() }, function (data) {
+                switch (data.Code) {
+                    case "100": location.href = "/Admin/ProjectManage/"; break;
+                    default: alert(data.Msg);
+                }
+            })
+        }
+</script>    
+}

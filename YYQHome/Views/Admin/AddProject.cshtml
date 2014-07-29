@@ -1,0 +1,52 @@
+﻿@{ Layout = "~/Views/Shared/_AdminLayout.cshtml";}
+@section Head{
+    <style type="text/css">
+        body{background-color:#fff;}
+        .dataList { margin:0px 0px;}
+        .shaDowBorder { -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px; }
+        .projectMain { margin-bottom:40px;}
+        .allMain { margin:10px 0px 0px 10px;width:400px;}
+    </style>    
+}
+@using Model;
+@{
+    MProject mProject = ViewBag.Project;
+ }
+<div  class="shaDowBorder allMain">
+    <table class="dataList">
+        <tr>
+            <td>项目名称：</td>
+            <td><input type="text" id="TypeName" name="TypeName" value="@mProject.TypeName"/></td>
+            <td style="color:#f00;">*</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button"    onclick="@(ViewBag.Action+"()"); return false;" value="提交保存"/></td>
+        </tr>
+    </table>
+</div>
+@section  BodyFooter{
+<script type="text/javascript">
+    /// <reference path="/JS/jquery.1.9.1.min.js" />
+    /// <reference path="/JS/SFLYQ.Helper.js" />
+    var hp = SFLYQ.Helper;
+    function Add() {
+        $.post("/AdminAjax/AddProject", { "TypeName": $("#TypeName").val() }, function (data) {
+            switch (data.Code) {
+                case "100": location.href = "/Admin/ProjectManage/"; break;
+                default: alert(data.Msg);
+            }
+        })
+    }
+    function Edit() {
+        $.post("/AdminAjax/EditProject/", { "ProjectId": "@ViewBag.ProjectId", "TypeName": $("#TypeName").val() }, function (data) {
+              switch (data.Code) {
+                  case "100": location.href = "/Admin/ProjectManage/"; break;
+                  default: alert(data.Msg);
+              }
+          })
+      }
+
+
+</script>
+}
