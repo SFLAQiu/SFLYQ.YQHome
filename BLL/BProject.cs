@@ -60,11 +60,7 @@ namespace BLL {
             var index=datas.FindIndex(d=>d.Id==mProjectEdit.Id);
             if (index<0) return false;
             datas[index] = mProjectEdit;
-            try {
-                datas.XmlSerializeToFile(_filePath, Encoding.UTF8);
-            } catch {
-                return false;
-            }
+            datas.XmlSerializeToFile(_filePath, Encoding.UTF8);
             return true;
         }
        

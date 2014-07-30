@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using BLL;
 using LG.Utility;
 using Model;
+using YYQHome.Method;
 namespace YYQHome.Controllers {
     public class AdminAjaxController : BaseControl {
         private BProject _bllProject = new BProject();
@@ -64,11 +65,11 @@ namespace YYQHome.Controllers {
             var handerSc = _bllProject.EditProject(mProject);
             if (!handerSc) return WriteJson(new {
                 Code = "104",
-                Msg = "添加失败！"
+                Msg = "编辑失败！"
             });
             return WriteJson(new {
                 Code = "100",
-                Msg = "添加成功！"
+                Msg = "编辑成功！"
             });
         }
         /// <summary>
@@ -84,11 +85,11 @@ namespace YYQHome.Controllers {
             var deleteHanderSc = _bllProject.DeleteProject(projecId);
             if (!deleteHanderSc) return WriteJson(new {
                 Code = "103",
-                Msg = "添加失败！"
+                Msg = "删除失败！"
             });
             return WriteJson(new {
                 Code = "100",
-                Msg = "添加成功！"
+                Msg = "删除成功！"
             });
 
         }
@@ -143,11 +144,11 @@ namespace YYQHome.Controllers {
             var deleteHanderSc = _bllProject.DeleteProjectDetail(projecId, projectDetailId);
             if (!deleteHanderSc) return WriteJson(new {
                 Code = "103",
-                Msg = "添加失败！"
+                Msg = "删除失败！"
             });
             return WriteJson(new {
                 Code = "100",
-                Msg = "添加成功！"
+                Msg = "删除成功！"
             });
 
         }
@@ -174,14 +175,53 @@ namespace YYQHome.Controllers {
             var handerSc = _bllProject.EditProjectDetail(projectId,mProjectDetail);
             if (!handerSc) return WriteJson(new {
                 Code = "104",
-                Msg = "添加失败！"
+                Msg = "编辑失败！"
             });
             return WriteJson(new {
                 Code = "100",
-                Msg = "添加成功！"
+                Msg = "编辑成功！"
             });
         }
        
+        #endregion
+        #region
+        /// <summary>
+        /// 登陆
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Login() {
+            string userName = Request.GetF("UserName");
+            string passWord = Request.GetF("PassWord");
+            if (userName.IsNullOrWhiteSpace() || passWord.IsNullOrWhiteSpace()) return WriteJson(new {
+                 Code = "102",
+                Msg = "参数错误！"
+            });
+            if (userName != "yyq" || passWord != "hml") return WriteJson(new {
+                Code = "103",
+                Msg = "密码错误！"
+            });
+            WebHelper.DoLogin(new MUserInfo { 
+                Id=1, 
+                PassWord=passWord,
+                UserName=userName,
+                ShowName="SFLYQ"
+            });
+            return WriteJson(new {
+                Code = "100",
+                Msg = "登陆成功！"
+            });
+        }
+        /// <summary>
+        /// 注销
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult LoginOut() {
+            WebHelper.LoginOut();
+            return WriteJson(new {
+                Code = "100",
+                Msg = "注销成功！"
+            });
+        }
         #endregion
 
     }

@@ -142,5 +142,14 @@ if (typeof SFLYQ == 'undefined') {
             }).eq(opt.defaultSelIndex).click();
         }
     };
+    mh.keyDownDoFn = function (evt, keyCode, doFn) {
+        /// <summary>键盘键位触发方法</summary>
+        /// <param name="keyCode" type="int">键盘标识码</param>
+        /// <param name="doFn" type="function">执行方法</param>
+        evt = evt ? evt : (window.event ? window.event : null);//兼容IE和FF
+        if (evt.keyCode == keyCode) {
+            if (doFn) doFn();
+        }
+    }
 
 })();

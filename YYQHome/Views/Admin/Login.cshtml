@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Head{
+    <style type="text/css">
+        body { background-color:white;}
+        .loginBg{background-color: rgb(0, 0, 0);opacity: 0.2;z-index:1;}
+        .dataList  td { width:200px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px;}
+        .dataList thead td {background-color:#4ba1ea;color:#fff;}
+        .shaDowBorder { -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; border:1px #808080 solid;box-shadow: black 1px 1px 6px; }
+        .projectMain { margin-bottom:40px;}
+        .manageMain { margin:10px 0px 0px 10px;}
+        .loginBox { background-color:#fff; width:300px; height:115px;vertical-align:middle; position:fixed;left:40%;top:40%;z-index:99;}
+        .loginTitle { width:300px;height:30px; text-align:center;color:#fff; background-color:#3f76f8;}
+        .loginBtn {width:60px; height:25px; }
+    </style>    
+}
+<div class="loginBg"></div>
+<div class="shaDowBorder loginBox">
+        <div class="loginTitle">霸气登陆框</div>
+        <table>
+            <tr>
+                <td style="text-align:right;">你是:</td>
+                <td><input class="parameItem" type="text" name="UserName" /></td>
+                <td style="color:#f00;">*</td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">秘钥:</td>
+                <td><input class="parameItem" type="password" name="PassWord" /></td>
+                <td style="color:#f00;">*</td>
+            </tr>
+             <tr>
+                <td></td>
+                <td><input id="loginBtn" class="loginBtn" type="button"  value="芝麻开门"/></td>
+            </tr>
+        </table>
+</div>
+@section BodyFooter{
+    <script type="text/javascript">
+        /// <reference path="/JS/jquery.1.9.1.min.js" />
+        /// <reference path="/JS/SFLYQ.Helper.js" />
+        var sfl = SFLYQ.Helper;
+        (function () {
+            $("#loginBtn").click(function () {
+                $.post("/AdminAjax/Login/", { "UserName":$(".parameItem[name='UserName']").val(), "PassWord": $(".parameItem[name='PassWord']").val() }, function (data) {
+                    switch (data.Code) {
+                        case "100": {
+                            location.href = "/Admin/ProjectManage/";
+                        }; break;
+                        default: alert(data.Msg); break;
+                    }
+                });
+            });
+            $(".parameItem").keydown(function (evt) {
+                sfl.modulesHander.keyDownDoFn(evt, 13, function () {
+                    $("#loginBtn").click();
+                });
+            });
+            function IniLoginBg() {
+                $(".loginBg").height(window.innerHeight + "px");
+            }
+            IniLoginBg();
+            $(window).resize(function () {
+                IniLoginBg();
+            });
+            
+        }());
+    </script>
+}

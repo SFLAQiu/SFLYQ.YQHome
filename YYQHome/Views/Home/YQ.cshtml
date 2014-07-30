@@ -116,32 +116,30 @@
         <!--我做过的项目-->
         <div id="pos_Project" class="contentItem projectBox borderRdius">
             <div class="projectDetail borderRdius">
-            <div class="AllContent">
-                <!--JS封装-->
-                @{var num=0;}
-                @foreach (var itemProject in datas) {
-                    <div class="ItemContent">
-                        <div class="ContentTitle"><span>-</span><span>@itemProject.TypeName</span></div>
-                        <div class="ContentDetail">
-                            <ul>
-                                @foreach (var itemDetial in itemProject.projectDetailDatas) {
-                                     <li><a href="@itemDetial.Url" target="_blank">@itemDetial.Title</a></li>
-                                }
-                                <li><a href="javascript:;">等... ...</a></li>
-                            </ul>
+                <div class="AllContent">
+                    <!--JS封装-->
+                    @{var num=0;}
+                    @foreach (var itemProject in datas) {
+                        <div class="ItemContent">
+                            <div class="ContentTitle"><span>-</span><span>@itemProject.TypeName</span></div>
+                            <div class="ContentDetail">
+                                <ul>
+                                    @foreach (var itemDetial in itemProject.projectDetailDatas) {
+                                         <li><a href="@itemDetial.Url" target="_blank">@itemDetial.Title</a></li>
+                                    }
+                                    <li><a href="javascript:;">等... ...</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                   num++;
-                   if (num != 0 && num % 3 == 0) { 
-                        <!-- 分隔线 -->
-                        <div class="clearFloat"></div>
-                        <!-- 分隔线 -->
+                       num++;
+                       if (num != 0 && num % 3 == 0) { 
+                            <!-- 分隔线 -->
+                            <div class="clearFloat"></div>
+                            <!-- 分隔线 -->
+                        }
                     }
-                }
 
-            </div>
-
-
+                </div>
             </div>
         </div>
         <!--我做过的项目-->

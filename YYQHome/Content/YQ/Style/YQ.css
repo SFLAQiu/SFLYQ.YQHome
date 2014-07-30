@@ -5,12 +5,13 @@ p,ul,ul li,form{padding:0; margin:0; list-style:none;}
 a{ text-decoration:none;}
 img{border:0;}
 /*LOGO*/
-.logoArea{position:absolute;top:0px; left:1200px;height:174px; width:204px;z-index:99;}
+.logoArea{position:absolute;top:0px; left:1200px;height:174px; width:204px;z-index:99;font-weight:bolder;color:white;margin:0 0;-moz-transition: all 0.8s ease-in-out; -webkit-transition: all 0.8s ease-in-out; -o-transition: all 0.8s ease-in-out;-ms-transition: all 0.8s ease-in-out;transition: all 0.8s ease-in-out;}
+ .logoArea:hover{-moz-transform: rotate(360deg);-webkit-transform: rotate(360deg); -o-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
 /*背景*/
 body{background-color:#aec066;}
 /*左边背景区域*/
-.leftBgArea{background-color:#ce4718;height:auto;height:910px; width:350px;margin:0px 0px;position:relative;}
-.leftNav ul{background-color:#dd8514;height:auto;height:900px;margin:10px 0px 0px 0px;position:absolute;right:0px;width:120px;}
+.leftBgArea{background-color:#ce4718;width:350px;margin:20px 0px 0px 0px;position:relative;}/*_height:1000px; min-height:1000px;*/
+.leftNav ul{background-color:#dd8514;margin:10px 0px 0px 0px;position:absolute;right:0px;width:120px;}/*_height:1000px; min-height:1000px;*/
 .leftNav ul li{position:relative;height:145px;width:120px;border:hidden;vertical-align:bottom;}
 .leftNav .navItem{text-align:center;height:145px;width:120px;margin:0px 0px;position:relative;right:0px;position:absolute;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;box-shadow: black 1px 1px 6px;}
 .leftNav .navItem img{margin-top:35px;}
@@ -24,7 +25,7 @@ body{background-color:#aec066;}
 .mainArea{background-color:#ffffff;height:auto;height:880px;width:820px;position:absolute; left:370px;top:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;}
 .mainArea .contentItem{display:none;overflow-y:auto;overflow-x:hidden;}
 .homeBox{background-color:#e8f6f7;height:100%;}
-.aboutBox{background-color:#eafbbd;height:100%}
+.aboutBox{background-color:#CBE9D7;height:100%}
 .aboutTop{background:url("/Content/YQ/Style/Images/about_bg.jpg") no-repeat; width:700px;height:200px;position:relative; margin-top:20px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;box-shadow: black 1px 1px 6px; }
 .aboutPhoto{position:absolute;left:85px; top:50px;z-index:5;}
 .aboutTop .aboutTitle{position:absolute;left:230px; top:80px;}
@@ -37,7 +38,7 @@ body{background-color:#aec066;}
 .aboutContent .aboutContentItem .aboutContentItemTitle{font-size:15px;font-family:'Microsoft YaHei';font-weight:bold;display:block;}
 .aboutContent .aboutContentItem .aboutContentItemDetail{font-size:13px;font-family:'Microsoft YaHei';display:block;text-indent:2em;margin-top:4px;}
 .messageBox{overflow-y:auto;overflow-x:hidden; height:800px;}
-.projectBox {padding-left:10px; padding-top:20px;overflow-y:auto;overflow-x:hidden;background-color:#ddf5f7;height:100%;} 
+.projectBox {padding-left:10px; padding-top:20px;overflow-y:auto;overflow-x:hidden;background-color:#EEFFCF;height:100%;} 
 .projectBox .projectDetail{overflow:hidden;}
 /*项目内容模块样式*/
 .AllContent{margin-left:50px;min-height:500px;}

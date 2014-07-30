@@ -12,8 +12,14 @@
 @using Model;
     @{
         List<MProject> projectDatas = ViewBag.Datas;
+        MUserInfo mUserInfo = ViewBag.UserInfo??new MUserInfo();
     }
     <div class="manageMain shaDowBorder">
+        <div>
+            <span>寨主，<span style="color:red;">@mUserInfo.ShowName</span></span>
+            <span><a id="loginOutBtn" href="javascript:;">[注销]</a></span>
+        </div>
+        <div class="line" style="margin-bottom:10px"></div>
         <div>
             <div><a href="/Admin/AddProject/?action=Add">[添加项目]</a></div>
         </div>
@@ -84,5 +90,17 @@
             }
         })
     }
+    (function () {
+        $("#loginOutBtn").click(function () {
+            $.post("/AdminAjax/LoginOut/", {}, function (data) {
+                switch (data.Code) {
+                    case "100": {
+                        location.href = "/Admin/Login/";
+                    }; break;
+                    default: alert(data.Msg); break;
+                }
+            })
+        });
+    })();
 </script>    
 }
