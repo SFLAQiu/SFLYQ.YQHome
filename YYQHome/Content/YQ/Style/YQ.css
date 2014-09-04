@@ -1,6 +1,6 @@
 ﻿/*初始化*/
 *{margin:0 auto;padding:0;}
-body{ padding:0;margin:0 auto; font-family:Microsoft YaHei,SimSun;position:relative; background:none; background:#fff;}
+body{ padding:0;margin:0 auto; font-family:Microsoft YaHei,SimSun;position:relative; background:none; background:#fff;min-height:1000px;height:100%;}
 p,ul,ul li,form{padding:0; margin:0; list-style:none;}
 a{ text-decoration:none;}
 img{border:0;}
@@ -57,3 +57,8 @@ body{background-color:#aec066;}
 .TopBoxHover{background:url("/Content/YQ/Images/top.png") no-repeat -27px 0 scroll;}
 /*移动的云*/
 .cloundSay{text-indent:2em; display:none;position:absolute;height:20px;width:150px;top:0px;left:60px;background-color:#b2ccf9;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 1px 1px 6px #B0AAA5;font-family:'Microsoft YaHei';font-size:12px;color:#463f28;font-weight:bold;}
+/*底部*/
+.footer{color:#fff;position:absolute; bottom:40px;left:480px;}
+.footer p{ text-align:center;padding:10px 0; }
+.footer a{margin:auto 5px; color:#fff;}
+.footer .home{ text-decoration:underline;color:#fff;}
