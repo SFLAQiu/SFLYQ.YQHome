@@ -97,6 +97,7 @@
     <Compile Include="Controllers\AdminAjaxController.cs" />
     <Compile Include="Controllers\BaseControl.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TogetherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -106,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Include\Projects.shtml" />
+    <Content Include="Content\Together\Style\Main.css" />
     <Content Include="Content\YQ\Images\bg.jpg" />
     <Content Include="Content\YQ\Images\cAd_b1.jpg" />
     <Content Include="Content\YQ\Images\cAd_b2.jpg" />
@@ -181,9 +183,11 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\AddProjectDetail.cshtml" />
     <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Together\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Together\Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -214,11 +218,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>13494</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51736/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

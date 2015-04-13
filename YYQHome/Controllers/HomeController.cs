@@ -9,7 +9,7 @@ using Helper;
 using LG.Utility;
 
 namespace YYQHome.Controllers {
-    public class HomeController : Controller {
+    public class HomeController : BaseControl {
         //
         // GET: /Home/
 
@@ -20,6 +20,9 @@ namespace YYQHome.Controllers {
         public ActionResult YQ() {
             ViewBag.Datas = new BProject().GetList();
             return View();
+        }
+        public ActionResult Test() {
+            return WriteJson(new BTest().GetModel());
         }
 
     }

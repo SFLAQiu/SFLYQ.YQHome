@@ -33,6 +33,9 @@
     <Reference Include="LG.Utility">
       <HintPath>..\Ref\LG.Utility.dll</HintPath>
     </Reference>
+    <Reference Include="Safe.Base.DbHelper">
+      <HintPath>..\Ref\Safe.Base.DbHelper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,8 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelper.cs" />
     <Compile Include="DProject.cs" />
+    <Compile Include="DTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{01c29281-91dd-4046-b495-28a90940cc0a}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

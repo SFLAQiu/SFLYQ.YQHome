@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="MProjectDetail.cs" />
     <Compile Include="MProject.cs" />
+    <Compile Include="MTest.cs" />
     <Compile Include="MUserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
